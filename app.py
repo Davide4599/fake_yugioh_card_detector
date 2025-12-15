@@ -9,7 +9,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Initialize Roboflow
-rf = Roboflow(api_key="rdYBlkQwzVCiBbpoIcV3")
+rf = Roboflow(api_key="ROBOFLOWAPIKEY")
 project = rf.workspace("davide-iotti").project("fake-yu-gi-oh-card-detector")
 model = project.version(1).model
 
@@ -94,4 +94,5 @@ def analyze_file():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
+
     app.run(debug=True)
