@@ -9,7 +9,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Initialize Roboflow
-rf = Roboflow(api_key="ROBOFLOWAPIKEY")
+rf = Roboflow(api_key=os.environ["ROBOFLOW_API_KEY"])
 project = rf.workspace("davide-iotti").project("fake-yu-gi-oh-card-detector")
 model = project.version(1).model
 
